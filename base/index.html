@@ -6,9 +6,115 @@
 
     <title>Overview</title>
 
+    <!-- link external stylesheet -->
     <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- link bootstrap css library -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- link bootstrap js library -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
 </head>
 <body>
+    <div class="container-fluid">
+        <h1>Overview</h1>
+        <!-- First Row - The Summary -->
+        <div class="row">
+            <div class="col-sm-6 col-md-3">
+                <p>Unresolved</p>
+                <p>60</p>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <p>Overdue</p>
+                <p>16</p>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <p>Open</p>
+                <p>43</p>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <p>On hold</p>
+                <p>64</p>
+            </div>
+        </div>
+        <!-- Second Row - The Graph and Metrics-->
+        <!-- Graph -->
+        <div class="row">
+            <div class="col-sm-12 col-md-8">
+                <p>placeholder for graph</p>
+            </div>
+            <!-- Metrics -->
+            <div class="col-sm-12 col-md-4">
+                <div class="row">
+                    <div class="col-sm-6 col-md-12">
+                        <p>Resolved</p>
+                        <p>449</p>
+                    </div>
+                    <div class="col-sm-6 col-md-12">
+                        <p>Received</p>
+                        <p>426</p>
+                    </div>
+                    <div class="col-sm-6 col-md-12">
+                        <p>Average first response time</p>
+                        <p>33m</p>
+                    </div>
+                    <div class="col-sm-6 col-md-12">
+                        <p>Average response time</p>
+                        <p>3h 8m</p>
+                    </div>
+                    <div class="col-sm-6 col-md-12">
+                        <p>Resolution within SLA</p>
+                        <p>94%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Third Row - The Modules -->
+         <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p class="text-start">Unresolved tickets</p>
+                        <p class="text-start">Group: Support</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="text-end">View Details</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p class="text-start">Waiting on Feature Request</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="text-end">4238</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p class="text-start">Awaiting Customer Response</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="text-end">1005</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p class="text-start">Awaiting Developer Fix</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="text-end">914</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p class="text-start">Pending</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="text-end">281</p>
+                    </div>
+                </div>
+            </div>
+         </div>
+    </div>
     
 </body>
 </html>
