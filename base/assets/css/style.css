@@ -1,3 +1,11 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.custom-bg {
+  background-color: #F7F8FC;
+}
+
 .navbar {
   list-style: none;
 }
@@ -8,6 +16,10 @@
 
 #username {
   margin-right: 10px;
+}
+
+.custom-ul li {
+  height: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */
