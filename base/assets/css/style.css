@@ -1,5 +1,5 @@
 body {
-  font-family: "Inter", sans-serif;
+  --bs-body-font-family: "Inter",sans-serif;
 }
 
 .custom-bg {
@@ -10,6 +10,11 @@ body {
   list-style: none;
 }
 
+@media (min-width: 992px) {
+  .custom-logo {
+    background-color: #212529;
+  }
+}
 .navbar p {
   margin-bottom: 0;
 }
@@ -20,6 +25,28 @@ body {
 
 .custom-ul li {
   height: 50px;
+}
+
+.custom-status-card .card-title {
+  color: #ACAFBE;
+}
+.custom-status-card {
+  transition: all 0.25s ease;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+}
+.custom-status-card:hover {
+  transform: translateY(-2px);
+  border-color: #3751ff;
+  cursor: pointer;
+}
+.custom-status-card:hover .card-title {
+  color: #3751ff;
+  font-weight: 500;
+}
+.custom-status-card:hover .card-text {
+  color: #3751ff;
+  font-weight: 600;
 }
 
 .custom-sidebar li {
