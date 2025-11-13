@@ -22,4 +22,15 @@ body {
   height: 50px;
 }
 
+.custom-sidebar li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.custom-btn svg {
+  color: #F0F1F7;
+  background-color: #A0A3B5;
+  border-radius: 4px;
+}
+
 /*# sourceMappingURL=style.css.map */
