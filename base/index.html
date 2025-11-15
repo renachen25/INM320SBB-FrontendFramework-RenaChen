@@ -6,21 +6,16 @@
 
     <title>Dashboard Kit - Overview</title>
 
-    <!-- link external stylesheet -->
-    <link rel="stylesheet" href="/assets/css/style.css">
     <!-- Import font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <!-- link bootstrap css library -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!-- link bootstrap js library -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <!-- link Chart js -->
-     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- Link Bootstrap icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- link external stylesheet -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+
 </head>
 <body>
-    <div class="custom-bg container-fluid mb-3">
+    <main class="custom-bg container-fluid mb-3">
         <!-- The header bar-->
         <header class="row">
             <nav class="navbar flex-row col-12 py-0">
@@ -37,44 +32,44 @@
                 <div class="d-flex flex-row align-items-center">
                     <!-- Magnifiying Glass Search Icon -->
                     <div class="nav-item text-nowrap">
-                        <buton class="nav-link px-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearch" aria-controls="navbarSearch" aria-expanded="false" aria-label="Toggle Search">
+                        <button class="nav-link px-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearch" aria-controls="navbarSearch" aria-expanded="false" aria-label="Toggle Search">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="6.5" cy="6.5" r="5.75" stroke="#C5C7CD" stroke-width="1.5"/>
                                 <path d="M11 11L15 15" stroke="#C5C7CD" stroke-width="1.5" stroke-linecap="round"/>
                             </svg>
-                        </buton>
+                        </button>
                     </div>
                     <!--  Notification Bell Icon -->
                     <div class="nav-item text-nowrap">
-                        <buton class="nav-link px-2 border-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNotifications" aria-controls="navbarNotifications" aria-expanded="false" aria-label="Toggle Notifications">
+                        <button class="nav-link px-2 border-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNotifications" aria-controls="navbarNotifications" aria-expanded="false" aria-label="Toggle Notifications">
                             <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7.99999 18.5C9.10374 18.5 9.99905 17.6047 9.99905 16.5H6.00093C6.00093 17.6047 6.89624 18.5 7.99999 18.5ZM14.7309 13.8216C14.1272 13.1728 12.9975 12.1969 12.9975 9C12.9975 6.57188 11.295 4.62812 8.99937 4.15125V3.5C8.99937 2.94781 8.55187 2.5 7.99999 2.5C7.44812 2.5 7.00062 2.94781 7.00062 3.5V4.15125C4.70499 4.62812 3.00249 6.57188 3.00249 9C3.00249 12.1969 1.8728 13.1728 1.26905 13.8216C1.08155 14.0231 0.998429 14.2641 0.999991 14.5C1.00343 15.0125 1.40562 15.5 2.00312 15.5H13.9969C14.5944 15.5 14.9969 15.0125 15 14.5C15.0016 14.2641 14.9184 14.0228 14.7309 13.8216Z" fill="#C5C7CD"/>
                                 <circle cx="13" cy="4.5" r="3.75" fill="#3751FF" stroke="#F7F8FC" stroke-width="1.5"/>
                             </svg>
-                        </buton>
+                        </button>
                     </div>
                     <!-- User Name -->
                     <div class="nav-item text-nowrap text-body-secondary ms-2">
-                        <p>Rena Chen</p>
+                        <p class="small fw-medium">Rena Chen</p>
                     </div>
                     <!-- User Profile Photo -->
-                    <div class="nav-item text-nowrap px-1">
+                    <div class="nav-item text-nowrap px-2">
                         <img width="48" height="48" class="border border-3 border border-light-subtle rounded-circle" src="assets/images/renachen.png" alt="An image of a person's selfie taken from an upper angle against a Parthenon">
                     </div>
                 </div>
             </nav>
         </header>
-        <!-- The sidebar menu -->
         <div class="row">
-            <div class="sidebar col-lg-2 d-none d-md-block pt-lg-4 text-bg-dark">
+            <!-- The sidebar menu -->
+            <aside class="sidebar col-lg-2 d-none d-lg-block pt-lg-4 text-bg-dark min-vh-100">
                 <div class="offcanvas-lg offcanvas-end bg-body-tertiary">
                     <div class="offcanvas-body d-lg-flex flex-column p-0">
                         <!-- First 6 menu items -->
                         <ul class="custom-sidebar nav flex-column pt-lg-2 text-bg-dark border-bottom border-secondary">
                             <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2 active text-secondary" aria-current="page" href="#">
+                                <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#" style="color: #DDE2FF;">
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M15.5232 8.47046H8.54412L13.1921 13.1184C13.3697 13.296 13.6621 13.3104 13.8447 13.1384C14.9829 12.066 15.7659 10.6205 15.9956 8.99546C16.035 8.71722 15.8041 8.47046 15.5232 8.47046ZM15.0576 6.56458C14.8153 3.05106 12.0076 0.243416 8.49412 0.00106353C8.22589 -0.0174658 8 0.20871 8 0.477533V7.0587H14.5815C14.8503 7.0587 15.0762 6.83281 15.0576 6.56458ZM6.58824 8.47046V1.49135C6.58824 1.21047 6.34147 0.979591 6.06353 1.019C2.55853 1.5143 -0.120585 4.57635 0.00412089 8.24605C0.132356 12.0149 3.37736 15.1054 7.14794 15.0581C8.6303 15.0396 10 14.5619 11.1262 13.7631C11.3585 13.5984 11.3738 13.2563 11.1724 13.0549L6.58824 8.47046Z" fill="#9FA2B4"/>
+                                        <path d="M15.5232 8.47046H8.54412L13.1921 13.1184C13.3697 13.296 13.6621 13.3104 13.8447 13.1384C14.9829 12.066 15.7659 10.6205 15.9956 8.99546C16.035 8.71722 15.8041 8.47046 15.5232 8.47046ZM15.0576 6.56458C14.8153 3.05106 12.0076 0.243416 8.49412 0.00106353C8.22589 -0.0174658 8 0.20871 8 0.477533V7.0587H14.5815C14.8503 7.0587 15.0762 6.83281 15.0576 6.56458ZM6.58824 8.47046V1.49135C6.58824 1.21047 6.34147 0.979591 6.06353 1.019C2.55853 1.5143 -0.120585 4.57635 0.00412089 8.24605C0.132356 12.0149 3.37736 15.1054 7.14794 15.0581C8.6303 15.0396 10 14.5619 11.1262 13.7631C11.3585 13.5984 11.3738 13.2563 11.1724 13.0549L6.58824 8.47046Z" fill="#DDE2FF"/>
                                     </svg>  
                                     Overview
                                 </a>
@@ -141,61 +136,53 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </aside>
             <!-- The Overview Body -->
-            <div class="col-sm-12 col-lg-10">
-                 <div class="row">
-                    <div class="col-sm-7">
-                        <h6>Overview</h6>
-                    </div>
-                 </div>
+            <section class="col-sm-12 col-lg-10">
+                <h1 class="h6 mb-2">Overview</h1>
                 <!-- The Summary Row -->
-                <div class="row g-3">
+                <section class="row g-3">
                     <!-- Card Unresolved -->
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class=" custom-status-card card text-center p-4 border ">
-                            <h6 class="card-title">Unresolved</h6>
+                            <h2 class="h6 card-title mb-0">Unresolved</h2>
                             <p class="card-text fs-2 fw-medium">60</p>
                         </div>
                     </div>
                     <!-- Card Overdue -->
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="custom-status-card card text-center p-4">
-                            <h6 class="card-title">Overdue</h6>
+                            <h2 class="h6 card-title mb-0">Overdue</h2>
                             <p class="card-text fs-2 fw-medium">16</p>
                         </div>
                     </div>
                     <!-- Card Open -->
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="custom-status-card card text-center p-4">
-                            <h6 class="card-title">Open</h6>
+                            <h2 class="h6 card-title mb-0">Open</h2>
                             <p class="card-text fs-2 fw-medium">43</p>
                         </div>
                     </div>
                     <!-- Card On hold -->
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="custom-status-card card text-center p-4">
-                            <h6 class="card-title">On hold</h6>
+                            <h2 class="h6 card-title mb-0">On hold</h2>
                             <p class="card-text fs-2 fw-medium">64</p>
                         </div>
                     </div>
-                </div>
-                <!-- The Graph and Metrics Row-->
-                <!-- Graph -->
-                <div class="row g-3 mt-1">
-                    <div class="col-12 col-md-8">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h6 class="pt-2 fw-medium">Today's trends</h6>
+                </section>
+                <!-- The Graph and Metrics Card-->
+                <section class="card mt-3">
+                    <div class="row g-0">
+                        <!-- Graph -->
+                        <div class="col-12 col-md-9 px-4 py-4">
+                            <h2 class="h6 pt-2 fw-medium">Today's trends</h2>
                                 <p class="fw-light text-body-tertiary" style="font-size: 0.6rem">as of 25 May 2019, 09:41 PM</p>
                                 <canvas class="w-100" id="myChart" style="display: block; box-sizing: border-box; height: 464px; width: 1101px;"></canvas>
-                            </div>
                         </div>
-                    </div>
-                    <!-- Metrics -->
-                    <div class="col-12 col-md-4">
-                        <div class="card h-100">
-                            <div class="card-body d-flex flex-column justify-content-center">
+                        <!-- Metrics Chart -->
+                        <div class="col-12 col-md-3 border-start">
+                            <div class="d-flex flex-column justify-content-center h-100">
                                 <ul class="list-unstyled text-center mb-0 flex-fill d-flex flex-column justify-content-between">
                                     <li class="py-2 border-bottom flex-grow-1 d-flex flex-column justify-content-center">
                                         <div class="text-secondary">Resolved</div>
@@ -221,15 +208,15 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
                 <!-- The Modules Row -->
-                <div class="row g-3 mt-1">
+                <section class="row g-3 mt-1">
                     <!-- Unresolved Tickets Module -->
                     <div class="col-sm-12 col-md-6">
-                        <div class="card h-100">
+                        <article class="card h-100">
                             <div class="card-body border border-0">
                                 <div class="d-flex justify-content-between align-items-start mb-1">
-                                    <h6 class="card-title mb-0">Unresolved tickets</h6>
+                                    <h2 class="h6 card-title mb-0">Unresolved tickets</h2>
                                     <a href="#" class="small text-decoration-none">View details</a>
                                 </div>
                                 <div class="small mb-3">
@@ -256,14 +243,14 @@
                                     </li>
                                 </ul>
                             </div>
-                        </div>
+                        </article>
                     </div>
                     <!-- Tasks Module -->
                     <div class="col-sm-12 col-md-6">
-                        <div class="card h-100">
+                        <article class="card h-100">
                             <div class="card-body">
                                 <div class="d-flex justify-content-between align-items-start mb-1">
-                                    <h6 class="card-title mb-0">Tasks</h6>
+                                    <h2 class="h6 card-title mb-0">Tasks</h2>
                                     <a href="#" class="small text-decoration-none">View all</a>
                                 </div>
                                 <div class="text-body-tertiary small mb-3">Today</div>
@@ -304,12 +291,18 @@
                                     </li>
                                   </ul>
                             </div>
-                        </div>
+                        </article>
                     </div>
-                </div>
-            </div>
+                </section>
+            </section>
         </div>
-    </div>
-<script src="assets/js/main.js"></script>
+    </main>
+
+    <!-- link bootstrap js library -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- link Chart js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/main.js"></script>
+
 </body>
 </html>
