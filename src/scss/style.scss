@@ -1,47 +1,72 @@
 body {
-    --bs-body-font-family: "Inter",sans-serif; 
+    --bs-body-font-family: "Inter", sans-serif;
 }
 
-.custom-bg{
+.custom-bg {
     background-color: #F7F8FC;
 }
- 
-.navbar{
+
+.navbar {
     list-style: none;
 }
 
-// For screens large and up, change the bg colour to dark
-@media (min-width: 992px) {      
-    .custom-logo{
-        background-color: #212529;
-    }
-  }
-
-.navbar p{
+.navbar p {
     margin-bottom: 0;
 }
 
-#username{
+.custom-logo {
+    height: 48px;
+}
+
+// For screens large and up, change the logo bg colour to dark
+@media (min-width: 992px) {
+    .custom-logo {
+        background-color: #212529;
+    }
+}
+
+#username {
     margin-right: 10px;
+}
+
+.nav-link.active {
+    color: #DDE2FF;
 }
 
 .custom-ul {
     li {
-      height: 50px;
+        height: 50px;
     }
 }
 
+.custom-subtitle {
+    font-size: 0.6rem;
+}
+
+#myChart {
+    display: block; 
+    box-sizing: border-box; 
+    height: 464px; 
+    width: 1101px;
+}
+
+// To override the default bs checkbox styling
+.custom-form-check {
+    border-radius: 50% !important;
+}
+
 // Hover over effect for status cards
-.custom-status-card{
-    .card-title{
-        color:#ACAFBE;
-    }    
+.custom-status-card {
+    .card-title {
+        color: #ACAFBE;
+    }
+
     transition: all 0.25s ease;
     background-color: #ffffff;
     border: 1px solid #e5e7eb;
 
     &:hover {
-        transform: translateY(-2px); 
+        transform: translateY(-2px);
         border-color: #3751ff;
         cursor: pointer;
 
@@ -56,18 +81,18 @@ body {
         }
     }
 }
-  
+
 .custom-sidebar {
     li {
-      padding-top: 5px;
-      padding-bottom: 5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
 }
-  
+
 .custom-btn {
     svg {
-      color: #F0F1F7;
-      background-color: #A0A3B5;
-      border-radius: 4px;
+        color: #F0F1F7;
+        background-color: #A0A3B5;
+        border-radius: 4px;
     }
 }

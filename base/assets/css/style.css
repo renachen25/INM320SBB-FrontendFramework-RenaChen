@@ -1,5 +1,5 @@
 body {
-  --bs-body-font-family: "Inter",sans-serif;
+  --bs-body-font-family: "Inter", sans-serif;
 }
 
 .custom-bg {
@@ -10,21 +10,44 @@ body {
   list-style: none;
 }
 
+.navbar p {
+  margin-bottom: 0;
+}
+
+.custom-logo {
+  height: 48px;
+}
+
 @media (min-width: 992px) {
   .custom-logo {
     background-color: #212529;
   }
 }
-.navbar p {
-  margin-bottom: 0;
-}
-
 #username {
   margin-right: 10px;
 }
 
+.nav-link.active {
+  color: #DDE2FF;
+}
+
 .custom-ul li {
   height: 50px;
+}
+
+.custom-subtitle {
+  font-size: 0.6rem;
+}
+
+#myChart {
+  display: block;
+  box-sizing: border-box;
+  height: 464px;
+  width: 1101px;
+}
+
+.custom-form-check {
+  border-radius: 50% !important;
 }
 
 .custom-status-card .card-title {
