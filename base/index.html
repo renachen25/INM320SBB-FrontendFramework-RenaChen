@@ -83,8 +83,8 @@
                     <div class="offcanvas-body d-lg-flex flex-column p-0">
                         <!-- First 6 menu items -->
                         <ul class="custom-sidebar nav flex-column pt-lg-2 text-bg-dark border-bottom border-secondary"
-                            style="--bs-border-opacity: .3;">
-                            <li class="nav-item bg-light border-start border-3" style="--bs-bg-opacity: .05;">
+                            style="--bs-border-opacity: .3;" id="sidebarMenu1">
+                            <!-- <li class="nav-item bg-light border-start border-3" style="--bs-bg-opacity: .05;">
                                 <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#">
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -154,11 +154,11 @@
                                     </svg>
                                     Articles
                                 </a>
-                            </li>
+                            </li> -->
                         </ul>
                         <!-- Last 2 menu items -->
-                        <ul class="custom-sidebar nav flex-column pt-lg-3 text-bg-dark">
-                            <li class="nav-item">
+                        <ul class="custom-sidebar nav flex-column pt-lg-3 text-bg-dark" id="sidebarMenu2">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link d-flex align-items-center gap-2 text-secondary"
                                     aria-current="page" href="#">
                                     <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
@@ -181,45 +181,45 @@
                                     </svg>
                                     Subscription
                                 </a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </div>
             </aside>
             <!-- The Overview Body -->
-            <section class="col-sm-12 col-lg-10">
-                <h1 class="h6 mb-2">Overview</h1>
+            <section class="col-sm-12 col-lg-10" id="overviewModule">
+                <h1 class="h6 mb-2" id="overviewTitle">Overview</h1>
                 <!-- The Summary Row -->
-                <section class="row g-3">
+                <ul class="row g-3 list-unstyled" id="overviewList">
                     <!-- Card Unresolved -->
-                    <div class="col-12 col-sm-6 col-lg-3">
+                    <!-- <div class="col-12 col-sm-6 col-lg-3">
                         <div class=" custom-status-card card text-center p-4 border ">
                             <h2 class="h6 card-title mb-0">Unresolved</h2>
                             <p class="card-text fs-2 fw-medium">60</p>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- Card Overdue -->
-                    <div class="col-12 col-sm-6 col-lg-3">
+                    <!-- <div class="col-12 col-sm-6 col-lg-3">
                         <div class="custom-status-card card text-center p-4">
                             <h2 class="h6 card-title mb-0">Overdue</h2>
                             <p class="card-text fs-2 fw-medium">16</p>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- Card Open -->
-                    <div class="col-12 col-sm-6 col-lg-3">
+                    <!-- <div class="col-12 col-sm-6 col-lg-3">
                         <div class="custom-status-card card text-center p-4">
                             <h2 class="h6 card-title mb-0">Open</h2>
                             <p class="card-text fs-2 fw-medium">43</p>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- Card On hold -->
-                    <div class="col-12 col-sm-6 col-lg-3">
+                    <!-- <div class="col-12 col-sm-6 col-lg-3">
                         <div class="custom-status-card card text-center p-4">
                             <h2 class="h6 card-title mb-0">On hold</h2>
                             <p class="card-text fs-2 fw-medium">64</p>
                         </div>
-                    </div>
-                </section>
+                    </div> -->
+                </ul>
                 <!-- The Graph and Metrics Card-->
                 <section class="card mt-3">
                     <div class="row g-0">
@@ -268,18 +268,18 @@
                 <section class="row g-3 mt-1">
                     <!-- Unresolved Tickets Module -->
                     <div class="col-sm-12 col-md-6">
-                        <article class="card h-100">
+                        <article class="card h-100" id="unresolvedTicketsModule">
                             <div class="card-body border border-0">
                                 <div class="d-flex justify-content-between align-items-start mb-1">
-                                    <h2 class="h6 card-title mb-0">Unresolved tickets</h2>
-                                    <a href="#" class="small text-decoration-none">View details</a>
+                                    <h2 class="h6 card-title mb-0" id="unresolvedTitle"></h2>
+                                    <a href="#" class="small text-decoration-none" id="unresolvedAction"></a>
                                 </div>
                                 <div class="small mb-3">
-                                    <span class="text-body-tertiary">Group: </span>
-                                    <span class="text-body-secondary">Support</span>
+                                    <span class="text-body-tertiary" id="unresolvedLabel"></span>
+                                    <span class="text-body-secondary" id="unresolvedLabelDetails"></span>
                                 </div>
-                                <ul class=" custom-ul list-group list-group-flush border-top-0">
-                                    <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                <ul class=" custom-ul list-group list-group-flush border-top-0" id="unresolvedList">
+                                    <!-- <li class="list-group-item d-flex justify-content-between align-items-center px-0">
                                         <span>Waiting on Feature Request</span>
                                         <strong class="small fw-medium text-body-tertiary">4238</strong>
                                     </li>
@@ -294,23 +294,23 @@
                                     <li class="list-group-item d-flex justify-content-between align-items-center px-0">
                                         <span>Pending</span>
                                         <strong class="small fw-medium text-body-tertiary">281</strong>
-                                    </li>
+                                    </li> -->
                                 </ul>
                             </div>
                         </article>
                     </div>
                     <!-- Tasks Module -->
                     <div class="col-sm-12 col-md-6">
-                        <article class="card h-100">
+                        <article class="card h-100" id="tasksModule">
                             <div class="card-body">
                                 <div class="d-flex justify-content-between align-items-start mb-1">
-                                    <h2 class="h6 card-title mb-0">Tasks</h2>
-                                    <a href="#" class="small text-decoration-none">View all</a>
+                                    <h2 class="h6 card-title mb-0" id="tasksTitle"></h2>
+                                    <a href="#" class="small text-decoration-none" id="tasksAction"></a>
                                 </div>
-                                <div class="text-body-tertiary small mb-3">Today</div>
+                                <div class="text-body-tertiary small mb-3" id="tasksSectionLabel"></div>
                                 <!-- Task list -->
-                                <ul class="custom-ul list-group list-group-flush">
-                                    <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                                <ul class="custom-ul list-group list-group-flush" id="tasksList">
+                                    <!-- <li class="list-group-item d-flex align-items-center justify-content-between px-0">
                                         <div class="d-flex align-items-center gap-2">
                                             <input type="text" class="form-control form-control-sm border-0 px-0"
                                                 placeholder="Create new task">
@@ -346,7 +346,7 @@
                                             <span>Update ticket report</span>
                                         </div>
                                         <span class="badge bg-body-secondary text-body-secondary">DEFAULT</span>
-                                    </li>
+                                    </li> -->
                                 </ul>
                             </div>
                         </article>
