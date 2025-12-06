@@ -82,6 +82,27 @@ new Chart(ctx, {
     }
 })
 
+// Create the li HTML element in Sidebar Menu
+function createSidebarMenuItem(dataItem) {
+    const newListItem = document.createElement('li');
+    newListItem.className = 'nav-item';
+    // If active item
+    if (dataItem.active) {
+        newListItem.classList.add('bg-light', 'border-start', 'border-3');
+        newListItem.style.setProperty('--bs-bg-opacity', '.05');
+    }
+    const linkClass = dataItem.active
+        ? 'nav-link d-flex align-items-center gap-2 active'
+        : 'nav-link d-flex align-items-center gap-2 text-secondary';
+    newListItem.innerHTML = `
+        <a class="${linkClass}" href="${dataItem.url}" aria-current="page">
+            ${dataItem.icon}
+            ${dataItem.label}
+        </a>
+    `;
+    return newListItem;
+}
+
 // async/await
 async function getData() {
     try {
@@ -145,8 +166,8 @@ async function getData() {
                 // Badges
                 let badgeClass = "badge";
                 if (item.badge.style === "warning") badgeClass += " bg-warning text-white";
-                if (item.badge.style === "success") badgeClass += " bg-success";
-                if (item.badge.style === "secondary") badgeClass += " bg-body-secondary text-body-secondary";
+                else if (item.badge.style === "success") badgeClass += " bg-success";
+                else if (item.badge.style === "secondary") badgeClass += " bg-body-secondary text-body-secondary";
                 newListItem.innerHTML = `
                     <div class="d-flex align-items-center gap-2">
                         <input class="custom-form-check form-check-input mt-0" type="checkbox" ${item.checked ? "checked" : ""} aria-label="${item.label}">
@@ -174,29 +195,14 @@ async function getData() {
                 </div>
             `;
             overviewList.appendChild(newListItem);
-        })
+        });
 
         // Sidebar Menu  - first 6
         const sidebarMenu1 = document.querySelector('#sidebarMenu1');
         const sidebarItems1 = data.sidebarMenu.items;
 
         sidebarItems1.forEach(item => {
-            const newListItem = document.createElement('li');
-            newListItem.className = 'nav-item';
-            // If active item
-            if (item.active) {
-                newListItem.classList.add('bg-light', 'border-start', 'border-3');
-                newListItem.style.setProperty('--bs-bg-opacity', '.05');
-            }
-            const linkClass = item.active
-                ? 'nav-link d-flex align-items-center gap-2 active'
-                : 'nav-link d-flex align-items-center gap-2 text-secondary';
-            newListItem.innerHTML = `
-                <a class="${linkClass}" href="${item.url}" aria-current="page">
-                    ${item.icon}
-                    ${item.label}
-                </a>
-                `;
+            const newListItem = createSidebarMenuItem(item);
             sidebarMenu1.appendChild(newListItem);
         });
 
@@ -205,27 +211,11 @@ async function getData() {
         const sidebarItems2 = data.sidebarMenu2.items;
 
         sidebarItems2.forEach(item => {
-            const newListItem = document.createElement('li');
-            newListItem.className = 'nav-item';
-            // If active item
-            if (item.active) {
-                newListItem.classList.add('bg-light', 'border-start', 'border-3');
-                newListItem.style.setProperty('--bs-bg-opacity', '.05');
-            }
-            const linkClass = item.active
-                ? 'nav-link d-flex align-items-center gap-2 active'
-                : 'nav-link d-flex align-items-center gap-2 text-secondary';
-            newListItem.innerHTML = `
-                <a class="${linkClass}" href="${item.url}" aria-current="page">
-                    ${item.icon}
-                    ${item.label}
-                </a>
-                `;
+            const newListItem = createSidebarMenuItem(item);
             sidebarMenu2.appendChild(newListItem);
         });
     } catch (error) {
-        console.warn(`Nope: ${error}`)
-        console.error(error.stack);
+        console.warn(`Error getting data: ${error}`);
     }
 }
 getData();
